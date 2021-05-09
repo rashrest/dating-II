@@ -17,37 +17,37 @@
 </head>
 <header>
     <nav class="navbar navbar-expand-lg navbar-light bg-light">
-        <a class="navbar-brand" href="Home">My Dating Website</a>
+        <a class="navbar-brand" href="{{ @BASE }}">My Dating Website</a>
 
     </nav>
 </header>
 
-<body>
+
 <main class="container">
 <!--form for collecting personal information-->
-<form class="row">
+<form class="row" action="#" method="post">
     <fieldset id="personalInformation" name="firstForm" class="form-group rounded-right col-8">
         <legend>Personal Information</legend>
         <hr>
 
     <div class="form-group">
         <label for="name">First Name</label>
-        <input type="text" class="form-control" id="name">
+        <input type="text" class="form-control" id="name" name="name">
     </div>
 
         <div class="form-group">
             <label for="lastName">Last Name</label>
-            <input type="text" class="form-control" id="lastName">
+            <input type="text" class="form-control" id="lastName" name="lname">
         </div>
 
         <div class="form-group">
             <label for="age">Age</label>
-            <input type="text" class="form-control" id="age">
+            <input type="text" class="form-control" id="age" name="age">
         </div>
 
         <div class="form-group">
         <p>Gender</p>
-        <input type="radio" id="male" name="gender" value="male">
+        <input type="radio" id="male" name="gender" value="male" >
         <label for="male">Male</label>
         <input type="radio" id="female" name="gender" value="female">
         <label for="female">Female</label><br>
@@ -55,7 +55,7 @@
 
         <div class="form-group">
             <label for="phone">Phone</label>
-            <input type="tel" class="form-control" id="phone">
+            <input type="tel" class="form-control" id="phone" name="phone">
         </div>
 
 
@@ -65,11 +65,12 @@
     <aside class="col-4">
         <div class="jumbotron">
             <p><strong>Note: </strong> All information entered is proctected by our <a href="google.com">privacy policy.</a> Profile information can only be viewed by others with your permission.</p>
-        </div>
-
+        </div><br><br><br><br>
+        <input type="submit" class="btn btn-primary" id="next" value="Next >"/>
     </aside>
+
 </form>
-    <a type="button" class="btn btn-primary" id="next" href="Profile">Next></a>
+
 </main>
 
 <!-- Optional JavaScript; choose one of the two! -->
@@ -84,6 +85,6 @@
 <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.min.js" integrity="sha384-+YQ4JLhjyBLPDQt//I+STsc9iw4uQqACwlvpslubQzn4u2UU2UFM80nGisd026JF" crossorigin="anonymous"></script>
 
-</body>
+
 
 </html>

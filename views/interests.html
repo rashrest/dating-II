@@ -16,79 +16,81 @@
 </head>
 <header>
     <nav class="navbar navbar-expand-lg navbar-light bg-light">
-        <a class="navbar-brand" href="Home">My Dating Website</a>
+        <a class="navbar-brand" href="{{ @BASE }}">My Dating Website</a>
 
     </nav>
 </header>
 
 
 <main class="container">
-    <legend>Interests</legend>
+    <h3>Interests</h3>
     <hr>
-    <form>
+    <form action="#" method="post">
         <fieldset class="form-group rounded-right" id="personalInformation" name="firstForm">
             <label>In-door Interests</label>
             <div id="indoor" class="row">
                 <div class="col">
-                    <input type="checkbox" id="tv" name="tv" value="tv">
+                    <input type="checkbox" id="tv" name="indoor[]" value="tv">
                     <label for="tv">tv</label><br>
-                    <input type="checkbox" id="puzzle" name="puzzle" value="puzzle">
+                    <input type="checkbox" id="puzzle" name="indoor[]" value="puzzle">
                     <label for="puzzle"> puzzles</label><br>
                 </div>
-                <div class="col"><input type="checkbox" id="movies" name="movies" value="movies">
+                <div class="col"><input type="checkbox" id="movies" name="indoor[]" value="movies">
                     <label for="movies"> movies</label><br>
-                    <input type="checkbox" id="reading" name="reading" value="reading">
+                    <input type="checkbox" id="reading" name="indoor[]" value="reading">
                     <label for="reading"> reading</label><br>
                 </div>
-                <div class="col"><input type="checkbox" id="cooking" name="cooking" value="cooking">
+                <div class="col"><input type="checkbox" id="cooking" name="indoor[]" value="cooking">
                     <label for="cooking"> cooking</label><br>
-                    <input type="checkbox" id="playingCards" name="playingCards" value="playingCards">
+                    <input type="checkbox" id="playingCards" name="indoor[]" value="playingCards">
                     <label for="playingCards"> playing cards</label><br>
                 </div>
 
-                    <div class="col"><input type="checkbox" id="boardGame" name="boardGame" value="boardGame">
+                    <div class="col"><input type="checkbox" id="boardGame" name="indoor[]" value="boardGame">
                         <label for="boardGame"> board game</label><br>
-                        <input type="checkbox" id="videoGames" name="videoGames" value="videoGames">
+                        <input type="checkbox" id="videoGames" name="indoor[]" value="videoGames">
                         <label for="videoGames"> video games</label><br>
                     </div>
 
             </div>
 
-            <label for="outdoor">Out-door Interests</label>
-            <div class="row" id="outdoor">
+            <label >Out-door Interests</label>
+            <div class="row" id="outdoors">
 
                 <div class="col">
-                    <input type="checkbox" id="hiking" name="hiking" value="hiking">
+                    <input type="checkbox" id="hiking" name="outdoor[]" value="hiking">
                     <label for="hiking"> hiking</label><br>
-                    <input type="checkbox" id="walking" name="walking" value="walking">
+                    <input type="checkbox" id="walking" name="outdoor[]" value="walking">
                     <label for="walking"> walking</label><br>
                 </div>
 
                 <div class="col">
-                    <input type="checkbox" id="biking" name="biking" value="biking">
+                    <input type="checkbox" id="biking" name="outdoor[]" value="biking">
                     <label for="biking"> biking</label><br>
-                    <input type="checkbox" id="climbing" name="climbing" value="climbing">
+                    <input type="checkbox" id="climbing" name="outdoor[]" value="climbing">
                     <label for="climbing"> climbing</label><br>
                 </div>
 
 
-                <div class="col"><input type="checkbox" id="swimming" name="swimming" value="swimming">
+                <div class="col"><input type="checkbox" id="swimming" name="outdoor[]" value="swimming">
                     <label for="swimming"> swimming</label>
                 </div>
 
 
                 <div class="col">
-                    <input type="checkbox" id="collecting" name="collecting" value="collecting">
+                    <input type="checkbox" id="collecting" name="outdoor[]" value="collecting">
                     <label for="collecting"> collecting</label>
                 </div>
+
             </div>
+            <input type="submit" class="btn btn-primary" id="next" value="Next>">
         </fieldset>
     </form>
-    <a type="button" class="btn btn-primary" id="next" href="Summary">Next></a>
+
 </main>
 
 
-<body>
+
 
 
 <!-- Option 1: jQuery and Bootstrap Bundle (includes Popper) -->
@@ -111,6 +113,6 @@
         integrity="sha384-+YQ4JLhjyBLPDQt//I+STsc9iw4uQqACwlvpslubQzn4u2UU2UFM80nGisd026JF"
         crossorigin="anonymous"></script>
 
-</body>
+
 
 </html>

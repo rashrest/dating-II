@@ -12,16 +12,65 @@
           integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">
 
     <title>Profile Summary</title>
-<!--    <link rel="stylesheet" href="styles/style.css">-->
+    <link rel="stylesheet" href="styles/summary.css">
+
 </head>
 <header>
     <nav class="navbar navbar-expand-lg navbar-light bg-light">
-        <a class="navbar-brand" href="#">My Dating Website</a>
+        <a class="navbar-brand" href="{{ @BASE }}">My Dating Website</a>
 
     </nav>
 </header>
 
 <body>
+<main class="container">
+    <div class="row">
+        <div class="col-6">
+            <table class="tg">
+                <thead>
+                <tr>
+                    <th class="tg-0lax">Name : {{ @SESSION.name}} {{ @SESSION.lname}}</th>
+                </tr>
+                </thead>
+                <tbody>
+                <tr>
+                    <td class="tg-0lax">Gender: {{ @SESSION.gender}}</td>
+                </tr>
+                <tr>
+                    <td class="tg-0lax">Age: {{ @SESSION.age}}</td>
+                </tr>
+                <tr>
+                    <td class="tg-0lax">Phone: {{ @SESSION.phone}}</td>
+                </tr>
+                <tr>
+                    <td class="tg-0lax">Email: {{ @SESSION.email}}</td>
+                </tr>
+                <tr>
+                    <td class="tg-0lax">State: {{ @SESSION.state}}</td>
+                </tr>
+                <tr>
+                    <td class="tg-0lax">Seeking : {{ @SESSION.seek}}</td>
+                </tr>
+                <tr>
+                    <td class="tg-0lax">Interests: {{ @SESSION.indoor}}, {{ @SESSION.outdoor}} </td>
+                </tr>
+                </tbody>
+            </table>
+        </div>
+        <div class="col-6">
+            <img src="images/who.png" class="text-center" alt="image"/><br>
+            <p class="lead"> Biography</p><br>
+            <p> {{ @SESSION.bio}}</p>
+
+        </div>
+        <br><br>
+
+    </div>
+    <input type="submit" class="btn btn-primary" id="next" value="Contact Me!"/>
+    <br><br>
+</main>
+
+
 
 
 <!-- Option 1: jQuery and Bootstrap Bundle (includes Popper) -->

@@ -17,15 +17,15 @@
 </head>
 <header>
     <nav class="navbar navbar-expand-lg navbar-light bg-light">
-        <a class="navbar-brand" href="Home">My Dating Website</a>
+        <a class="navbar-brand" href="{{ @BASE }}">My Dating Website</a>
 
     </nav>
 </header>
 
-<body>
+
 <main class="container">
 
-    <form>
+    <form action="#" method="post">
         <fieldset class="form-group rounded-right row container" id="personalInformation" name="firstForm">
             <legend>Profile</legend>
             <hr>
@@ -33,19 +33,19 @@
             <div class="col-6">
                 <div class="form-group">
                     <label for="email">Email address</label>
-                    <input class="form-control" id="email" type="email">
+                    <input class="form-control" id="email" type="email" name="email">
 
                 </div>
                 <div class="form-group">
                     <label for="state">State</label>
-                    <input class="form-control no-spinners" id="state" type="email">
+                    <input class="form-control no-spinners" id="state" type="text" name="state">
                 </div>
 
                 <div class="form-group">
                     <p>Seeking</p>
-                    <input id="male" name="gender" type="radio" value="male">
+                    <input id="male" name="seek" type="radio" value="male">
                     <label for="male">Male</label>
-                    <input id="female" name="gender" type="radio" value="female">
+                    <input id="female" name="seek" type="radio" value="female">
                     <label for="female">Female</label><br>
                 </div>
 
@@ -54,18 +54,21 @@
             <div class="col-6">
                 <div class="form-floating">
                     <label for="bio">Biography</label>
-                    <textarea class="form-control" id="bio" placeholder="Tell us more about yourself"
+                    <textarea class="form-control" id="bio" name="bio" placeholder="Tell us more about yourself"
                               style="height: 100px"></textarea>
                 </div>
-                <a type="button" class="btn btn-primary" id="next" href="Interest">Next></a>
-            </div>
 
+            </div>
 
         </fieldset>
 
+            <input type="submit" class="btn btn-primary" id="next" value="Next>">
+
+        <br>
+        <br>
+
 
     </form>
-
 
 </main>
 
@@ -84,6 +87,6 @@
 <script crossorigin="anonymous" integrity="sha384-+YQ4JLhjyBLPDQt//I+STsc9iw4uQqACwlvpslubQzn4u2UU2UFM80nGisd026JF"
         src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.min.js"></script>
 
-</body>
+
 
 </html>
